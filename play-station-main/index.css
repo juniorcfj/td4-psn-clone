@@ -1,0 +1,1589 @@
+@font-face {
+    font-family: 'SST';
+    src: url('./font/SST-Medium.woff2') format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SST Roman';
+    src: url('./font/SST-Roman.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SST Light';
+    src: url('./font/SST-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SST Light2';
+    src: url('./font/SST-UltraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SST Medium';
+    src: url('./font/SST-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.first_section {
+    background-color: black;
+    width: 100%;
+    height: 34px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.first_section img {
+    width: 70px;
+}
+
+.navbar {
+    width: 100vw;
+    height: 65px;
+    position: sticky;
+    top: 0px;
+    z-index: 15;
+    background-color: white;
+}
+
+.nav_section_desktop{
+    padding: 0.5rem 1.25rem;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'SST';
+}
+
+.nav_links_left {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.nav_links_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 2.5px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon_svg {
+    align-self: flex-end;
+    fill: black;
+}
+
+.btn_blue {
+    background-color: #0070cb;
+    color: white;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-family: 'SST';
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.btn_blue:hover {
+    background-color: #034f8d;
+    box-shadow: 0 0 0 4px #ffffff,
+        /* White gap shadow */
+        0 0 0 6px #004d99;
+}
+
+.icon:hover p {
+    color: blue;
+    /* Change color to blue when user hovers */
+
+}
+
+.icon:hover .icon_svg {
+    fill: blue;
+    /* Change SVG color to blue when user hovers */
+}
+
+.nav_section_mobile {
+    display: none;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_section_mobile-section-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* media queries for navbar */
+@media screen and (max-width : 700px) {
+    .nav_section_desktop {
+        display: none;
+    }
+
+    .nav_section_mobile {
+        display: flex;
+    }
+}
+
+
+
+/* third section */
+
+.hero_section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.spidermanImage {
+    width: 100%;
+    height: 100%;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+    /* background-color: black; */
+}
+
+.content-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 1;
+    gap: 20px;
+    top: 60px;
+    left: 10px;
+    padding-left: 35px;
+}
+
+.content-overlay-heading {
+    color: white;
+    font-family: 'SST Light2';
+    font-size: 35px;
+
+}
+
+.marvelImage {
+    width: 35%;
+    height: auto;
+    object-fit: contain;
+}
+
+.content-overlay-para {
+    color: white;
+    width: 39%;
+    font-family: 'SST Light';
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.content-overlay-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.white-btn {
+    background-color: white;
+    color: black;
+    font-family: 'SST';
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+}
+
+.orange-btn {
+    background-color: #d63d02;
+    color: white;
+    font-family: 'SST';
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+}
+
+
+@media (max-width: 1200px) {
+    .content-overlay {
+        padding-left: 35px;
+        padding-right: 35px;
+        top: 120px;
+    }
+
+    .hero_section {
+        height: 645px;
+    }
+
+    .spidermanImage {
+        width: 100%;
+    }
+
+    .marvelImage {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+
+    .dark-overlay2 {
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        height: 300px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.95));
+        background-blend-mode: color-burn;
+        box-shadow: 0 -50px 50px 30px black;
+    }
+
+    .marvelImageContainer {
+        text-align: center;
+    }
+
+    .content-overlay-para {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .dark-overlay {
+        width: 30%;
+    }
+
+    .marvelImage {
+        width: 80%;
+    }
+
+    .spidermanImage {
+        width: 100%;
+    }
+
+    .content-overlay {
+        bottom: -410px;
+        align-items: center;
+    }
+
+    .content-overlay-para {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .dark-overlay2 {
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        height: 300px;
+        background-color: rgba(15, 16, 31, 1);
+        ;
+    }
+
+    .hero_section {
+        height: 100%;
+    }
+
+    .content-overlay {
+        bottom: -250px;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .spidermanImage {
+        height: auto;
+    }
+
+    .content-overlay-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .marvelImage {
+        width: 90%;
+    }
+
+    .content-overlay-para {
+        width: 90%;
+        font-size: 24px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .content-overlay {
+        padding: 0;
+    }
+
+    .content-overlay-para {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width : 352px) {
+    .content-overlay-buttons {
+        flex-direction: column;
+    }
+}
+
+
+/* fourth section cards */
+.card_section {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.card_section-cards {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+    grid-auto-flow: row;
+    grid-auto-rows: 86px;
+}
+
+.card_section-cards>div>picture>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    filter: contrast(60%);
+    /* reduce the color saturation initially */
+
+}
+
+.card_section-cards>div>picture>img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    filter: contrast(100%);
+    /* restore full color on hover */
+
+}
+
+@media screen and (max-width : 1024px) {
+    .card_section-cards {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 300px;
+    }
+}
+
+
+/* fifth section */
+
+.banner_section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.banner_section-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px;
+}
+
+.banner_section-left-heading {
+    font-family: 'SST Light';
+    font-size: 32px;
+
+}
+
+.banner_section-left-paragraph {
+    font-family: 'SST Light';
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.banner_section-right {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_section-right>picture>img {
+    width: 80%;
+    height: 80%;
+}
+
+@media screen and (max-width : 768px) {
+    .banner_section {
+        flex-direction: column-reverse;
+
+    }
+
+    .banner_section-left {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .banner_section-right {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .banner_section-right>picture>img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width : 472px) {
+    .banner_section-left-paragraph {
+        font-size: 16px;
+        line-height: normal;
+    }
+}
+
+
+/* play station plus */
+
+.playstation-plus {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.playstation-plus-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$100px$");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (min-width: 320px) {
+    .playstation-plus-overlay {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-mobile-02-en-27may22?$800px$");
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .playstation-plus-overlay {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$1200px$");
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .playstation-plus-overlay {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$1600px$");
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .playstation-plus-overlay {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$2400px$");
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .playstation-plus-overlay {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$3200px$");
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .playstation-plus-overlay {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$4000px$");
+    }
+}
+
+.playstation-plus-overlay-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    gap: 30px;
+
+}
+
+.playstation-plus-overlay-left_heading>img {
+    width: 65%;
+    height: 65%;
+}
+
+.playstation-plus-overlay-left>p {
+    font-family: "SST";
+    line-height: 26px;
+
+}
+
+.playstation-plus-overlay-left>button {
+    align-self: flex-start;
+}
+
+.playstation-plus-overlay-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.playstation-plus-overlay-right>picture>img {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width : 1024px) {
+    .playstation-plus-overlay-right>picture>img {
+        width: 70%;
+        height: 70%;
+        margin: 0 auto;
+    }
+
+    .playstation-plus-overlay-left_heading>img {
+        width: 85%;
+        height: 85%;
+    }
+
+    .playstation-plus-overlay-left {
+        gap: 15px;
+        padding: 50px;
+
+    }
+
+}
+
+@media screen and (max-width : 768px) {
+    .playstation-plus-overlay-left {
+        padding: 30px;
+
+    }
+
+    .playstation-plus-overlay-left_heading>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .playstation-plus-overlay-left p {
+        display: none;
+    }
+
+    .playstation-plus-overlay-right>picture>img {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+
+    .playstation-plus-overlay-left button {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width : 420px) {
+    .playstation-plus-overlay-right {
+        width: 70%;
+        padding: 10px;
+    }
+
+    .playstation-plus-overlay-right>picture>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .playstation-plus-overlay-left {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .playstation-plus-overlay-left p {
+        display: block;
+        text-align: center;
+        font-family: "SST Light";
+    }
+
+    .playstation-plus-overlay-left button {
+        align-self: center;
+    }
+
+    .playstation-plus-overlay {
+        flex-direction: column-reverse;
+
+    }
+}
+
+
+.media-block__img {
+    /* default image for smallest screens or non-css environments */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 70px;
+    gap: 10px;
+    background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$100px$");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+@media screen and (min-width: 320px) {
+    .media-block__img {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-mobile-01-en-26may23?$800px$");
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .media-block__img {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$1200px$");
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .media-block__img {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$1600px$");
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .media-block__img {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$2400px$");
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .media-block__img {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$3200px$");
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .media-block__img {
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$4000px$");
+    }
+}
+
+
+.media-block__img>p:nth-child(1) {
+    font-family: "SST Light";
+    color: white;
+    font-size: 30px;
+}
+
+.media-block__img>p:nth-child(2) {
+    font-family: "SST Medium";
+    color: white;
+    font-size: 45px;
+}
+
+.media-block__img>p:nth-child(3) {
+    font-family: "SST Light2";
+    color: white;
+    width: 40%;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.media-block__img>button {
+    margin-top: 18px;
+    align-self: flex-start;
+}
+
+@media screen and (max-width : 768px) {
+    .media-block__img {
+        height: 500px;
+        align-items: center;
+        background-position: top;
+        padding: 0;
+    }
+
+    .media-block__img>p:nth-child(1) {
+        display: none;
+    }
+
+    .media-block__img>p:nth-child(2) {
+        display: none;
+    }
+
+    .media-block__img>p:nth-child(3) {
+        display: none;
+    }
+
+    .media-block__img>button {
+        position: absolute;
+        bottom: 20px;
+        left: 50px;
+    }
+}
+
+@media screen and (max-width : 452px) {
+    .media-block__img {
+        height: 500px;
+        background-position: top;
+        padding: 0;
+        padding-bottom: 30px;
+        justify-content: flex-end;
+    }
+
+    .media-block__img>p:nth-child(1) {
+        display: block;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .media-block__img>p:nth-child(2) {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .media-block__img>p:nth-child(3) {
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+    .media-block__img>button {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        align-self: center;
+    }
+}
+
+/* eigth section */
+.eigth-section-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(38, 37, 79, 1);
+}
+
+
+
+.eigth-section-cards-card-1 {
+    flex-direction: column;
+    display: flex;
+    width: 320px;
+    gap: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.eigth-section-cards-card-2 {
+    flex-direction: column;
+    display: flex;
+    width: 320px;
+    cursor: pointer;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eigth-section-cards-card-3 {
+    flex-direction: column;
+    cursor: pointer;
+    display: flex;
+    width: 320px;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media screen and (max-width : 782px) {
+    .eigth-section-cards {
+        flex-direction: column;
+    }
+
+    .eigth-section-cards-card-1 {
+        width: 80%;
+    }
+
+    .eigth-section-cards-card-2 {
+        width: 80%;
+    }
+
+    .eigth-section-cards-card-3 {
+        width: 80%;
+    }
+}
+
+.eigth-section-cards-card-1>picture>img:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+    /* this creates a black box shadow */
+    transform: scale(1.05);
+    /* this will scale the element up to 105% of its original size */
+}
+
+.eigth-section-cards-card-2>picture>img:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+    /* this creates a black box shadow */
+    transform: scale(1.05);
+    /* this will scale the element up to 105% of its original size */
+}
+
+.eigth-section-cards-card-3>picture>img:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+    /* this creates a black box shadow */
+    transform: scale(1.05);
+    /* this will scale the element up to 105% of its original size */
+}
+
+.eigth-section-cards-card-1>picture>img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.eigth-section-cards-card-2>picture>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.eigth-section-cards-card-3>picture>img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.eigth-section-cards-card-1>p {
+    color: white;
+    text-align: center;
+    font-family: "SST Medium";
+    font-size: 22px;
+}
+
+.eigth-section-cards-card-2>p {
+    color: white;
+    text-align: center;
+    font-family: "SST Medium";
+    font-size: 22px;
+}
+
+.eigth-section-cards-card-3>p {
+    color: white;
+    text-align: center;
+    font-family: "SST Medium";
+    font-size: 22px;
+}
+
+
+/* ninth section */
+.god-of-war {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.god-of-war>picture>img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.god-of-war-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    width: 42%;
+    align-items: flex-start;
+    padding: 50px;
+    justify-content: center;
+    bottom: 0px;
+    left: 0;
+
+}
+
+.god-of-war-content>h1 {
+    color: white;
+    font-family: "SST Light";
+    letter-spacing: 3px;
+    font-size: 32px;
+}
+
+.god-of-war-content>p {
+    color: white;
+    font-family: "SST";
+    font-size: 15px;
+
+}
+
+.god-of-war-overlay {
+    display: none;
+}
+
+.god-of-war-content>picture>img {
+    width: 80%;
+    height: 80%;
+}
+
+@media screen and (max-width : 1024px) {
+    .god-of-war-content {
+        width: 60%;
+    }
+
+    .god-of-war-content>picture>img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .god-of-war-content>p {
+        font-size: 12px;
+
+    }
+
+    .god-of-war-content>h1 {
+        font-size: 20px;
+    }
+
+
+}
+
+@media screen and (max-width : 768px) {
+    .god-of-war-overlay {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        height: 200px;
+        width: 100%;
+        background-color: black;
+        box-shadow: 0 -10px 20px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .god-of-war-content {
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 90%;
+        padding-bottom: 10px;
+
+    }
+
+    .god-of-war-content>h1 {
+        font-size: 28px;
+    }
+
+    .god-of-war-content>picture>img {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width : 562px) {
+    .god-of-war-content {
+        padding: 10px;
+    }
+
+    .god-of-war-content>h1 {
+        font-size: 16px;
+    }
+
+    .god-of-war-content>p {
+        font-size: 12px;
+
+    }
+}
+
+
+/* new releases section */
+.new-releases {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 30px;
+    gap: 10px;
+}
+
+.new-releases>h1 {
+    color: white;
+    font-size: 20px;
+    font-family: "SST Medium";
+
+}
+
+.new-releases-cards {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(180px, 1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+}
+
+.new-releases-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 220px;
+}
+
+.new-releases-card p {
+    color: white;
+    font-size: 16px;
+    font-family: "SST Light";
+    text-align: center;
+    align-self: flex-start;
+    height: 50px;
+}
+
+.new-releases-card img {
+    width: 100%;
+    max-width: 180px;
+    height: 170px;
+    transition: all 0.5s ease-in-out;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.new-releases-card img:hover {
+    transform: scale(1.02);
+}
+
+@media screen and (max-width: 1200px) {
+    .new-releases-cards {
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .new-releases-cards {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .new-releases-cards {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .new-releases-cards {
+        grid-template-columns: repeat(1, minmax(180px, 1fr));
+    }
+}
+
+
+/* explore section */
+.explore-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+
+
+.explore-section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.explore-section-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 217px;
+}
+
+.explore-section h1 {
+    font-family: "SST Light2";
+    font-size: 32px;
+    height: 48px;
+}
+
+.explore-section p {
+    font-family: "SST Light";
+    margin-top: 10px;
+    font-size: 16px;
+    height: 60px;
+}
+
+.explore-section-card button {
+    align-self: flex-start;
+    border-radius: 20px;
+}
+
+.explore-section-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 979px) {
+    .explore-section {
+        padding: 10px;
+        /* text-align: center;  */
+    }
+
+    .explore-section h1 {
+        height: auto;
+    }
+
+    .explore-section p {
+        height: auto;
+    }
+
+    .explore-section-card {
+        gap: 15px;
+    }
+
+    .explore-section-cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+/* Mobile devices (portrait) */
+@media screen and (max-width: 671px) {
+    .explore-section {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .explore-section-cards {
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .explore-section-card button {
+        align-self: center;
+    }
+}
+
+
+/* follow us */
+.follow-us-section {
+    width: 100%;
+    margin-top: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fa;
+    padding: 100px;
+    gap: 50px;
+}
+
+.follow-us-section h1 {
+    font-family: "SST Light2";
+    font-size: 35px;
+}
+
+.follow-us-section-icons {
+    width: 40%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.follow-us-section-icons img {
+
+    width: 90%;
+    /* Increased the image width */
+    height: 90%;
+    /* Reduced from 100% to 70% */
+    object-fit: contain;
+    /* This ensures the image keeps its aspect ratio */
+
+}
+
+@media screen and (max-width: 768px) {
+    .follow-us-section {
+        padding: 20px;
+        padding-top: 40px;
+
+    }
+
+    .follow-us-section h1 {
+        font-size: 28px;
+    }
+
+    .follow-us-section-icons {
+        grid-template-columns: repeat(2, 1fr);
+        /* change the number of columns */
+    }
+
+    .follow-us-section-icons img {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .follow-us-section h1 {
+        font-size: 16px;
+    }
+
+    .follow-us-section-icons img {
+        width: 80%;
+        height: 90%;
+    }
+}
+
+/* footer section */
+
+.footer-section {
+    width: 100%;
+    height: 100%;
+    background-color: #00439c;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 80px;
+}
+
+.footer-section-logo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border-bottom: 1px solid #3d69b0;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-section-logo-heading {
+    font-size: 50px;
+    color: white;
+    font-family: 'SST Light2';
+}
+
+
+@media screen and (max-width : 600px) {
+    .footer-section-logo-heading {
+        font-size: 25px;
+    }
+}
+
+
+.footer-section-logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #3d69b0;
+    padding-bottom: 15px;
+    gap: 25px;
+}
+
+.footer-section-logo-content-left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-section-logo-content-right {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: row;
+}
+
+.footer-section-logo-content {
+    color: white;
+    margin: 15px 0;
+}
+
+.footer-section-logo-content h2 {
+    font-family: "SST";
+    font-size: 17px;
+}
+
+.footer-section-logo-content p {
+    font-family: "SST Light";
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-section-logo-content p:hover {
+    color: rgb(211, 198, 198);
+}
+
+.footer-section-logo-content-one {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-two {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 200px;
+}
+
+.footer-section-logo-content-three {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-four {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-five {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-six {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-six-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-section-logo-content-six-icons img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.footer-section-logo-content2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3d69b0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.footer-section-logo-content2-first {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer-section-logo-content2-first-headings {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'SST Light';
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.footer-section-logo-content2-first img {
+    width: 100px;
+    height: 100px;
+}
+
+.footer-section-logo-content2 p {
+    color: white;
+    font-family: "SST Light";
+    width: 95%;
+    font-size: 14.5px;
+    line-height: 20px;
+}
+
+.footer-section-logo-content3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer-section-logo-content3-left {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer-section-logo-content3-left h3 {
+    font-family: "SST Light";
+    font-size: 14px;
+}
+
+.footer-section-logo-content3-right {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    color: white;
+
+}
+
+.footer-section-logo-content3-right div {
+    font-family: "SST Light";
+    font-size: 14px;
+}
+
+
+@media screen and (max-width : 1200px) {
+    .footer-section-logo-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width : 800px) {
+    .footer-section {
+        padding: 10px 60px;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .footer-section {
+        padding: 10px 40px;
+    }
+
+    .footer-section-logo-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content-left {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3-right div {
+        font-family: "SST Light";
+        font-size: 10px;
+    }
+
+    .footer-section-logo-content2 p {
+        font-size: 12px;
+    }
+}
